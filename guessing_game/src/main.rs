@@ -8,11 +8,12 @@ use std::cmp::Ordering;
 use std::io;
 
 fn main() {
-    println!("✨😃✨Guess the number or ☠die☠ trying it!✨😃✨");
+    
+    println!("✨😃✨Guess the number or ☠ die ☠ trying it!✨😃✨");
 
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    let secret_number = rand::thread_rng().gen_range(1..=50);
     let mut tried_counter: u8 = 0;
-    const MAX_TRIES: u8 = 6;
+    const MAX_TRIES: u8 = 4;
     //println!("The secret number is:{secret_number}");
 
     loop {
@@ -40,7 +41,7 @@ fn main() {
         };
 
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("¡Too small ñ🐀!"),
+            Ordering::Less => println!("¡Too small🐀!"),
             Ordering::Greater => println!("¡Too big 🐘!"),
             Ordering::Equal => {
                 println!("¡You win 🥳!");
