@@ -1,0 +1,8 @@
+[package]
+name = "packages-crates"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Para hora actual en local
+chrono = {version="0.4", feature="clock" }
